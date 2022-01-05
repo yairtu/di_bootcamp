@@ -1,0 +1,25 @@
+.greybox {
+  background-color: grey;
+  position: right;
+  width: 600px;
+  height: 200px;
+}
+
+.bluebox {
+  position: relative;
+  left: 4px;
+  top: 4px;
+  background-color: blue;
+  width: 175px;
+  height: 175px;
+}
+
+.orangebox {
+  position: relative;
+  left: 4px;
+  top: 4px;
+  background-color: orange;
+  width: 175px;
+  height: 175px;
+}
+
