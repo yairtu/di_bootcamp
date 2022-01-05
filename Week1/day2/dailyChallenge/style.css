@@ -1,0 +1,65 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-family: fantasy;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  color: white;
+  background-color: black;
+  width: 100vw;
+  height: 7vh;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 1500px;
+  margin-top: 5px;
+}
+
+body {
+  margin: auto;
+}
+
+.box {
+  height: fit-content;
+  width: 200px;
+  margin-top: 300px;
+  margin-right: 200px;
+  float: right;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: fantasy;
+}
+
+p {
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+footer {
+  list-style-type: none;
+  position: absolute;
+  height: 7vh;
+  width: 100vw;
+  background-color: cadetblue;
+}
+
+.middle{
+    height: 86vh;
+    width: 100vw;
+    background-image: url("hulk.jfif");
+}

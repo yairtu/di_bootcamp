@@ -1,0 +1,46 @@
+
+/*p {
+  padding: 75px;
+  color: cadetblue;
+  border-style: solid;
+  border-width: 3px;
+  border-color: green;
+  width: 500px;
+  height: 150px;
+  background-color: rgb(192, 247, 215);
+  margin: 75px;
+}*/
+
+body{
+    background-color: grey;
+}
+
+.flag{
+    border: 1px solid black;
+    height: 150px;
+    width: fit-content;
+}
+
+.red {
+  width: 100px;
+  height: 100%;
+  background-color: red;
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+}
+
+.white {
+  width: 100px;
+  height: 100%;
+  background-color: white;
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+}
+
+.blue {
+  width: 100px;
+  height: 100%;
+  background-color: blue;
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+}

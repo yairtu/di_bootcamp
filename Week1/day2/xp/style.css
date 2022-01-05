@@ -1,0 +1,40 @@
+.indent {
+  text-indent: 50px;
+}
+ul {
+  margin-left: 75px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  border: 5px solid orange;
+}
+
+.redTable {
+    border: 1px solid red;
+    color: red;
+    margin: auto;
+    width: 80vw;
+}
+
+.infoTable{
+    border: 1px solid black;
+    margin: auto;
+}
+
+.table{
+    width: 80vw;
+    margin: auto;
+}
+
+td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
