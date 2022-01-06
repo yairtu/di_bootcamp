@@ -1,0 +1,83 @@
+body {
+    margin: auto;
+}
+
+.left{
+    background-color: lightgray;
+    width: 33.33%;
+    float: left;
+    height: 100vh;
+    
+}
+
+.right{
+    background-color: beige;
+    width: 66.67%;
+    float: right;
+    height: 100vh;
+    text-align: left;
+}
+
+#myimg {
+    height: 170px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    
+  #name {
+    text-align: center;
+  }
+  
+  #occupation {
+    text-align: center;
+  }
+  
+  .details {
+    text-align: center;
+  }
+  
+  .social {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 35px;
+  }
+
+  h2{
+      padding-top: 30px;
+      padding-left: 5%;
+  }
+
+  h6{
+
+    padding-left: 5%;
+  }
+  
+  hr{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .description{
+      margin-left: 5%;
+      margin-right: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+
+  ul {
+      margin-left: 5%;
+      margin-top: 2px;
+  }
+
+  li{
+      padding-left: 15px;
+  }
+
+  .list{
+      display: inline-block;
+      width: 45%;
+  }
