@@ -1,0 +1,51 @@
+body{
+    margin: auto;
+}
+
+#background{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("fishing.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 75%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0%;
+}
+
+li{
+    color: lightblue;
+    font-size: 2vw;
+    padding: 3vw;
+    float:right;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#fish{
+    float: left;
+    font-size: 5vw;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    font-size: large;
+    text-align: center;
+    color: chartreuse;
+}
+
+p{
+    display: inline;
+}
+
+h1{
+    margin-top: 20vw;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
