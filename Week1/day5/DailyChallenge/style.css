@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  background-image: url("hulk.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.maincontainer {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+nav {
+  padding: 1vh;
+  height: 5vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.logo {
+  padding: 1.75vh;
+  height: 2vw;
+  float: left;
+}
+
+.middle {
+  font-family: fantasy;
+  margin-left: 75vw;
+  margin-top: 40vh;
+  height: 25vh;
+  width: 23vw;
+}
+
+ul {
+  list-style-type: none;
+  width: auto;
+  margin: 0%;
+}
+
+li {
+  color: white;
+  font-size: 2vw;
+  padding: 1.75vh;
+  display: inline;
+  font-family: fantasy;
+  float: right;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  font-size: 2vw;
+  text-align: right;
+  background-color: black;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  body {
+    margin: 0;
+    background-image: none;
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .middle {
+    text-align: center;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    margin: 0;
+    background-image: none;
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .middle {
+    text-align: center;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    margin: 0;
+    background-image: none;
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .middle {
+    text-align: center;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  body {
+    margin: 0;
+    background-image: none;
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .middle {
+    text-align: center;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    height: 100vh;
+    width: 100vw;
+  }
+}

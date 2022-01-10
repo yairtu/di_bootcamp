@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.maincontainer {
+  height: 7vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#top {
+  color: white;
+  text-align: center;
+  background-color: grey;
+  flex: 1;
+}
+
+#middle {
+  color: white;
+  text-align: center;
+  background-color: indianred;
+  flex: 4;
+}
+
+#bottom {
+  color: white;
+  text-align: center;
+  background-color: indigo;
+  flex: 4;
+}

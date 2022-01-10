@@ -1,0 +1,69 @@
+body {
+  margin: auto;
+}
+
+.maincontainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gridcontainer {
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    "red red red"
+    "purple green yellow"
+    "purple blue blue"
+    "red red purple"
+    "green green green"
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+}
+
+.red {
+  grid-area: red;
+  background-color: red;
+  grid-column: 3 span;
+}
+
+.purple {
+  grid-area: purple;
+  background-color: purple;
+}
+
+.green {
+  grid-area: green;
+  background-color: green;
+}
+
+.yellow {
+  grid-area: yellow;
+  background-color: yellow;
+}
+
+.blue {
+  grid-area: blue;
+  background-color: blue;
+}
+
+.red2 {
+  grid-area: red;
+  background: red;
+}
+
+.purple2 {
+  grid-area: purple;
+  background-color: purple;
+}
+
+.green2 {
+  grid-area: green;
+  background-color: green;
+}
