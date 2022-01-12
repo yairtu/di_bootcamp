@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+
+.maincontainer{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.yellow-box{
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+    margin: 2vh;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
