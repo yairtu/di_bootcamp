@@ -1,11 +1,13 @@
 //Exercise 1
 
-/*
+
 let x = 5;
 let y = 3;
 
-if(x < y) {
+if (x < y) {
     console.log("x is the biggest number");
+} else {
+    console.log("y is the biggest number");
 }
 
 //Exercise 2
@@ -26,13 +28,14 @@ if (newDog === "Chihuahua") {
 //Exercise 3
 let num = parseInt(prompt("Enter a number"));
 
-if (num % 0) {
+if (num % 2 == 0) {
     prompt(`${num} is an even number`);
-} else {
+} else if (num != 0) {
     prompt(`${num} is an odd number`);
+} else {
+    prompt(`your number is 0`);
 }
 
-*/
 
 //Exercise 4
 let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
@@ -40,10 +43,13 @@ let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
 switch (users.length) {
     case 0:
         console.log("no one is online");
-        break;
+            break;
     case 1:
         console.log(`${users[0]} is online`);
-        break;
+            break;
+    case 2:
+        console.log(`${users[0]} and ${users[1]} are online`);
+            break;
     default:
         console.log(`${users[0]}, ${users[1]} and ${users.length - 2} more are online`);
 }
