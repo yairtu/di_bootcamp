@@ -6,6 +6,9 @@ for (let i = 0; i < 6; i++) {
     stars += "*";
 }
 
+
+//same challenge nested loop
+
 let n = 6;
 let star = "";
 
