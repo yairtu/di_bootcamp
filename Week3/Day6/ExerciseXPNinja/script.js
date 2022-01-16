@@ -61,3 +61,4 @@ function passOrFail(num) {
 }
 
 passOrFail(findAverage(grades));
+

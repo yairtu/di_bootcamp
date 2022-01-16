@@ -95,9 +95,7 @@ console.log(`first floor # of apartments: ${building.numberOfAptByFloor.firstFlo
 console.log(`third floor # of apartments: ${building.numberOfAptByFloor.thirdFloor}`)
 
 
-let secondTentant = building.nameOfTenants[1]
-let numRoomsAndRentSecondTenant = building.numberOfRoomsAndRent[secondTentant];
-let numRoomsSecondTenant = numRoomsAndRentSecondTenant[0];
+let secondTentant = building.nameOfTenants[1];
 
 //if you just try to use the second tenant without toLowerCase() it wont work cause the property is dan not Dan
 console.log(`${building.nameOfTenants[1]} has ${building.numberOfRoomsAndRent[secondTentant.toLowerCase()][0]} rooms`);
@@ -107,7 +105,10 @@ console.log(`${building.nameOfTenants[1]} has ${building.numberOfRoomsAndRent[se
 // let numRoomsAndRentSecondTenant = building.numberOfRoomsAndRent[secondTentant];
 // let numRoomsSecondTenant = numRoomsAndRentSecondTenant[0];
 
-
+if (building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1] > building.numberOfRoomsAndRent.dan[1]) {
+    building.numberOfRoomsAndRent.dan[1] = 1200;
+    console.log(building.numberOfRoomsAndRent.dan[1]);
+}
 
 //Exercise 5
 let family = {
