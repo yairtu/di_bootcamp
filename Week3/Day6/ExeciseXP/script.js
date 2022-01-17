@@ -12,7 +12,7 @@ console.log(people.indexOf("Mary"));
 
 people.slice(1, 3);
 
-people.indexOf("foo"); // returns -1 because foo is not in the array, so it is undefined.
+people.indexOf("foo"); // returns -1 because foo is not in the array.
 
 let last = people.length - 1;
 
@@ -39,6 +39,10 @@ let suffix = ["st", "nd", "rd", "th"]
 for (let i = 0; i < colors.length; i++) {
     console.log(`My #${i + 1} choice is ${colors[i]}`);
 }
+
+colors.forEach((element, index) => {
+    console.log(`My #${index + 1} choice is ${element}`)
+});
 
 console.log("")
 
