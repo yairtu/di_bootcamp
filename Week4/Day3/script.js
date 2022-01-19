@@ -17,7 +17,7 @@ let playTheGame = () => {
 
 let userNumber = () => {
     let userNum = parseInt(prompt("Enter a number between 0 and 10"));
-    //console.log(typeof(userNum)); Always returns number after praseInt so I had to use isNaN to check if its actually a real number
+    //console.log(typeof(userNum)); Always returns number after praseInt so I you need to use isNaN to check if its actually a real number
     if (isNaN(userNum)) {
         return alert("Sorry not a number, Goodbye");
     } else if (userNum < 0 || userNum > 10) {
