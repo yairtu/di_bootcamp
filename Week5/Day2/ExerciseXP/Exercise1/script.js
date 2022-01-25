@@ -9,7 +9,14 @@ pArray[pArray.length - 1].remove();
 
 
 let header2 = document.querySelector("h2");
-let changeColor = () => header2.style.backgroundColor = "red";
+let child = document.createElement("p");
+child.textContent = "hello class";
+header2.appendChild(child);
+let changeColor = (event) => {
+    console.log(event.target);
+    console.log(event.currentTarget);
+    event.target.style.backgroundColor = "red";
+}
 header2.addEventListener("click", changeColor);
 
 let header3 = document.querySelector("h3");
@@ -29,8 +36,10 @@ article.appendChild(button);
 // console.log(pArray);
 // article.appendChild(b);
 
-let boldText = () => pArray.forEach(p => p.style.fontWeight = "900");
+let boldText = () => pArray.forEach(p => p.style.fontWeight = "bold");
+
 button.addEventListener("click", boldText);
+
 let randPix = Math.floor(Math.random() * 100);
 console.log(randPix)
 let fontSize = () => header1.style.fontSize = `${randPix}px`;
@@ -43,21 +52,21 @@ let p2 = document.querySelector("#fade");
 let fadeout = () => {
     setInterval(hide, 200);
 }
-let hide = () => {
-let fade=document.querySelector("#fade");
-opacity =
-Number(window.getComputedStyle(fade).getPropertyValue("opacity"))
+// let hide = () => {
+//     let fade = document.querySelector("#fade");
+//     opacity =
+//         Number(window.getComputedStyle(fade).getPropertyValue("opacity"))
 
- if(opacity>0){
-        opacity=opacity-0.1;
-                p2.style.opacity=opacity
- }
- else{
-     clearInterval(intervalID); 
- }
-} 
+//     if (opacity > 0) {
+//         opacity = opacity - 0.1;
+//         p2.style.opacity = opacity
+//     }
+//     else {
+//         clearInterval(intervalID);
+//     }
+// }
 
 
-p2.addEventListener("mouseover", fadeout);
+// p2.addEventListener("mouseover", fadeout);
 
 
