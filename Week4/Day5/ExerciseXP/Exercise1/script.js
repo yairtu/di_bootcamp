@@ -9,26 +9,3 @@ ul.appendChild(newLi);
 
 console.log(ul.firstElementChild.textContent);
 console.log(ul.lastChild.textContent);
-
-
-window.onload = () => {
-	const colorsArray = [
-		'red',
-		'yellow',
-		'green'
-	];
-
-	const planets = [
-	    'Mercury',
-	    'Venus',
-	    'Earth',
-	];
-
-	const section = document.getElementsByTagName('section')[0];
-	for (let i = 0; i < planets.length; i++) {
-	    const newDiv = document.createElement('div');
-	    newDiv.className = 'planet';
-	    newDiv.style.backgroundColor = colorsArray[i];
-	    section.appendChild(newDiv);
-	}
-};
