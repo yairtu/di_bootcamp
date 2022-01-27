@@ -3,7 +3,7 @@ let myMove = () => {
     var position = 0;
     
     let frame = () => {
-        if(position == 350) {
+        if(position === 350) {
             clearInterval(id);
         } else {
             position++;
@@ -11,5 +11,5 @@ let myMove = () => {
             box.style.left = position + "px"
         }
     }
-    var id = setInterval(frame, 10);
+    let id = setInterval(frame, 10);
 }
