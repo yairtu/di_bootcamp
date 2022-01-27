@@ -1,8 +1,8 @@
 let allBoldItems;
 
-let getBoldItems = () => allBoldItems = document.getElementsByTagName("strong");
+let getBoldItems = () => document.getElementsByTagName("strong");
 
-getBoldItems();
+allBoldItems = getBoldItems();
 
 let highlight = () => {
     for(let i = 0; i < allBoldItems.length; i++) {
@@ -17,3 +17,5 @@ let return_normal = () => {
         allBoldItems[i].style.color = null;
     }
 }
+
+

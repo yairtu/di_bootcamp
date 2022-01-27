@@ -1,0 +1,31 @@
+body{
+    background: darkcyan;
+    margin: 0 auto;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bigbox{
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    background: darkmagenta;
+    margin-left: auto;
+}
+
+#smallbox{
+    display: inline-block;
+    background: darkgoldenrod;
+    height: 200px;
+    width: 200px;
+    margin: 10px
+}
+
+.hold {
+    border: solid #ccc 4px;
+}
+
+.invisible {
+    display: none;
+}

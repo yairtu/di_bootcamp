@@ -9,12 +9,7 @@ pArray[pArray.length - 1].remove();
 
 
 let header2 = document.querySelector("h2");
-let child = document.createElement("p");
-child.textContent = "hello class";
-header2.appendChild(child);
 let changeColor = (event) => {
-    console.log(event.target);
-    console.log(event.currentTarget);
     event.target.style.backgroundColor = "red";
 }
 header2.addEventListener("click", changeColor);
@@ -52,21 +47,23 @@ let p2 = document.querySelector("#fade");
 let fadeout = () => {
     setInterval(hide, 200);
 }
-// let hide = () => {
-//     let fade = document.querySelector("#fade");
-//     opacity =
-//         Number(window.getComputedStyle(fade).getPropertyValue("opacity"))
+let hide = () => {
+    let fade = document.querySelector("#fade");
+    opacity =
+        Number(window.getComputedStyle(fade).getPropertyValue("opacity"))
 
-//     if (opacity > 0) {
-//         opacity = opacity - 0.1;
-//         p2.style.opacity = opacity
-//     }
-//     else {
-//         clearInterval(intervalID);
-//     }
-// }
+        console.log(p2.style.opacity);
+
+    if (opacity > 0) {
+        opacity = opacity - 0.1;
+        p2.style.opacity = opacity
+    }
+    // else {
+    //     clearInterval(intervalID);
+    // }
+}
 
 
-// p2.addEventListener("mouseover", fadeout);
+p2.addEventListener("mouseover", fadeout);
 
 
