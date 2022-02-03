@@ -20,8 +20,10 @@ for e in newString:
 
 
 random.shuffle(newStringArr)
+
 newString = ""
 for e in newStringArr:
-    newString += e;
+    newString += e
 
 print(newString)
+

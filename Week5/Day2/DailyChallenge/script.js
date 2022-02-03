@@ -7,9 +7,6 @@ let pName = document.getElementById("person");
 let verb = document.getElementById("verb");
 let place = document.getElementById("place");
 
-
-
-
 let storyTime = () => {
     // allValues = [noun, adjective, pName, verb, place];
     let allValues = ["noun", "adjective", "person", "verb", "place"]
