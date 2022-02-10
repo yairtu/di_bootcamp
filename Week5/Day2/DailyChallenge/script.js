@@ -10,7 +10,7 @@ let place = document.getElementById("place");
 let storyTime = () => {
     // allValues = [noun, adjective, pName, verb, place];
     let allValues = ["noun", "adjective", "person", "verb", "place"]
-    .map(str => {console.log(document.getElementById(str)); return document.getElementById(str)});
+        .map(str => { console.log(document.getElementById(str)); return document.getElementById(str) });
     for (let i = 0; i < allValues.length; i++) {
         console.log(allValues[i]);
         if (allValues[i].value == "") {
