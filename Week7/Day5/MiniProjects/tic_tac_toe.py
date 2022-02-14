@@ -5,7 +5,7 @@ board = [
 ]
 
 current_player = "X"
-
+sadfasdf
 
 def display_board():
 	print("TIC TAC TOE")
