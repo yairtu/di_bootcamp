@@ -110,3 +110,4 @@ class Zoo:
 ramat_gan_safari = Zoo("Ramat Gan Safari")
 
 ramat_gan_safari.add_animal(input("Which animal should we add to the zoo? "))
+
