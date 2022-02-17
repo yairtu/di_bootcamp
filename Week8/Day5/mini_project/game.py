@@ -37,6 +37,3 @@ class Game:
 
 	def show_outcomes(self):
 		return self.game_outcomes
-
-game = Game()
-# print(game.get_computer_item())
