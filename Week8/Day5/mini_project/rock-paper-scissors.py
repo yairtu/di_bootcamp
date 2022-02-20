@@ -11,15 +11,18 @@ def get_user_menu_choice():
 
 def print_results(results):
 	print("\nThanks for playing!")
-	for key in results:
-		print(f"{key} : {results[key]}")
+	for key, value in results.items():
+		print(f"{key} : {value}")
+
 
 def main():
 	new_game = Game()
 	user_input = get_user_menu_choice()
-	while user_input != "x":
+	while user_input == "g":
 		new_game.play()
 		user_input = get_user_menu_choice()
 	print_results(new_game.show_outcomes())
 
+
 main()
+
