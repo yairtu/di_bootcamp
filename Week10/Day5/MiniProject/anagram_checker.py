@@ -6,12 +6,11 @@ class AnagramChecker:
 			sorted_word1 = sorted(word1)
 			sorted_word2 = sorted(word2)
 
-			if sorted_word1 == sorted_word2:
-				return True
-			else:
-				return False
+			return sorted_word1 == sorted_word2
+		return False
 
 	def __init__(self, text_file):
+		words = []
 		try:
 			with open(text_file) as f:
 				words = f.read().lower().split('\n')
@@ -20,22 +19,16 @@ class AnagramChecker:
 		self.words = words
 
 	def is_valid_word(self, word):
-		if word in self.words:
-			return True
-		else:
-			return False
+		return word in self.words
 
 	def get_anagrams(self, word):
 		anagrams = []
 		for wrd in self.words:
 			if self.is_anagram(word, wrd):
 				anagrams.append(wrd)
-		try:
+		if word in anagrams:
 			anagrams.remove(word)
-		except ValueError:
-			print("This is not a valid english word")
 		return anagrams
-
 
 # checker = AnagramChecker("sowpods.txt")
 # print(checker.get_anagrams("meat"))

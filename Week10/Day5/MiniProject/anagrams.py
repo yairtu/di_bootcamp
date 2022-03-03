@@ -12,7 +12,7 @@ while True:
 	if user_input.strip() == "exit":
 		break
 	elif len(user_input.split()) > 1:
-		print("You cannot enter more than one word, try again.")
+		print("You cannot enter more than one word, try again.\n")
 		continue
 	else:
 		anagrams = "Anagrams for your word: "
@@ -21,10 +21,8 @@ while True:
 		if len(anagrams_list) == 0:
 			print("No anagrams for your word!\n")
 		else:
-			count = 0
-			for word in anagrams_list:
-				anagrams += f"{word}{', ' if count < len(anagrams_list )-1 else '.'}"
-				count += 1
+			for i, word in enumerate(anagrams_list):
+				anagrams += f"{word}{', ' if i < len(anagrams_list )-1 else '.'}"
 			print(f'YOUR WORD: "{user_input.upper()}"\n'
 				  f'this is a valid English word')
 			print(f"{anagrams}\n")
