@@ -8,13 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
     <title>CV</title>
   </head>
   <div class="container">
     <div class="left">
         
-        <img id="myimg" src="../../../Week11/Day2/ExerciseXP/static/images/yair.jfif" alt="yair" />
+        <img id="myimg" src="./static/images/yair.jfif" alt="yair" />
         <h1 id="name">
           Yair <br />
           Tufeld
