@@ -4,6 +4,11 @@ from markdown import markdown
 app = Flask(__name__)
 
 
+@app.route('/')
+def index():
+	return render_template("index.html")
+
+
 @app.route('/exercises')
 def exercises():
 	with open("./lesson1/exercises.md", "r") as f:

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block my_block %}
+{% if request.path == "/blue.html" %}
+<body style="background-color:blue"></body>
+{% elif request.path == "/green.html" %}
+<body style="background-color:green"></body>
+{% elif request.path == "/red.html" %}
+<body style="background-color:red"></body>
+{% elif request.path == "/yellow.html" %}
+<body style="background-color:yellow"></body>
+{% else %}
+<h1>404. Universe not found.</h1>
+{% endif %}
+{% endblock %}
