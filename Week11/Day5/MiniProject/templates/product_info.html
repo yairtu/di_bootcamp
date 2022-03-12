@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block title %}Product info{% endblock %}
+{% block navbar %}{{ super() }}{% endblock %}
+{% block middle %}
+      <br><br>
+    <h3>Item ID: {{ product['ProductId'] }}</h3>
+<div class="card" style="width: 18rem;">
+
+  <img src="{{ url_for('static', filename=img) }}" class=card-img-top alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">Description:</h5>
+    <p class="card-text">{{ product['Description'] }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Category: {{ product['Category'] }}</li>
+    <li class="list-group-item">Size (width, depth, height): {{ product['Width'] }}, {{ product['Depth'] }}, {{ product['Height'] }} cm</li>
+    <li class="list-group-item">Price: {{ product['Price'] }}</li>
+  </ul>
+  <div class="card-body">
+    <a href="{{ url_for('add_product_to_cart', product_id=product['ProductId']) }}" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+{% endblock %}

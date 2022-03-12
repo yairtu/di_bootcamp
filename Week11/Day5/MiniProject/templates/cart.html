@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block title %}Cart{% endblock %}
+{% block navbar %}{{ super() }}{% endblock %}
+{% block middle %}
+    <br>
+    <br>
+    <h1>User Cart</h1>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Items in cart:
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for product in products %}
+            <li class="list-group-item">Item: {{ product['Name'] }}<br>Price: ${{ product['Price'] }}</li>
+                <a href="{{ url_for('delete_product_from_cart', product_id=product['ProductId']) }}" class="btn btn-primary">Remove from cart</a>
+                <br>
+            {% endfor %}
+            <li class="list-group-item">Total price: ${{ total_price }}</li>
+        </ul>
+    </div>
+{% endblock %}

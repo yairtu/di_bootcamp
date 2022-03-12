@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block title %}Our Products{% endblock %}
+{% block navbar %}{{ super() }}{% endblock %}
+{% block middle %}
+    <h1>Welcome to our products page</h1>
+    <div class="products">
+        {% for product in products %}
+            <div class="card">
+                {% if product['Quantity'] >= 0 %}
+                    <div class="card-header">
+                        {{ product['Name'] }}
+                    </div>
+                    <div class="card-body">
+                        <img src="./static/{{ product['ProductPicUrl'] }}" class="card-img-top" alt="..."
+                             style="width:40vw;margin-left: 25%;">
+                        <h5 class="card-title">{{ product['ProductId'] }}</h5>
+                        <p class="card-text">{{ product['Description'] }}</p>
+                        <div class="cardbuttons" style="margin-left: 39%">
+                            <a href="{{ url_for('product_info', product_id=product['ProductId']) }}"
+                               class="btn btn-primary">More Details</a>
+                            <a href="{{ url_for('add_product_to_cart', product_id=product['ProductId']) }}"
+                               class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}
+        {% endfor %}
+{% endblock %}
