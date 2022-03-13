@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Pokemon types{% endblock %}
+{% block content %}
+    <div>
+        <h2>Types:</h2>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    {% for item in types %}
+                        <li>
+                            <a href="{{ url_for('bytype', pokemon_type=item['name']) }}">{{ item['name'] }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

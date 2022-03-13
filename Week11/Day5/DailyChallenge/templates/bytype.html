@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}{{ pokemon_type }}{% endblock %}
+{% block content %}
+    <ul>
+        {% for pokemon in pokemons %}
+        <li>
+            <a href="{{ url_for('show_pokemon_by_id', pokemon_id=pokemon['pokemon']['name']) }}">{{ pokemon['pokemon']['name'] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

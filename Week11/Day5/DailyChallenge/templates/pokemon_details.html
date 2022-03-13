@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block title %}{{ pokemon['name'] }}{% endblock %}
+{% block content %}
+    <div style="margin-left: 27%; padding: 2em">
+        <img src="{{ pokemon['sprites']['other']['official-artwork']['front_default'] }}" alt="">
+        <p>Name: {{ pokemon['name'] }}</p>
+        <p>Type: {{ pokemon['types'][0]['type']['name'] }}</p>
+    </div>
+{% endblock %}
