@@ -39,8 +39,13 @@
 -- SELECT amount, payment_date FROM payment ORDER BY customer_id ASC;
 
 -- You need to check your inventory. Write a query to get all the movies which are not in inventory.
+-------------------NOT Sure how_________________
+-- SELECT film.film_id, inventory.film_id
+-- FROM film
+-- INNER JOIN inventory
+-- ON film.film_id = inventory.film_id
+_________________________________________________
 
--------------------- NOT SURE HOW TO DO THIS---------------------------------
 -- SELECT DISTINCT film.film_id
 -- FROM inventory
 -- JOIN film on film.film_id = inventory.film_id
@@ -48,4 +53,7 @@
 -- Select film_id FROM inventory WHERE film_id = 652
 
 -- Write a query to find which city is in which country.
--- ----------------------- NOT SURE HOW
+-- SELECT city.city, country.country
+-- FROM city
+-- INNER JOIN country
+-- ON city.country_id = country.country_id
