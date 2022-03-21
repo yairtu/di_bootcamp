@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Part 1</h1>
+    {% for user in all_users %}
+        {{ user }}
+        <br>
+    {% endfor %}
+</div>
+<br><br><br>
+<div>
+    <h1>Part 2</h1>
+    {% for user in all_users %}
+        {% if user.city == 'Roscoeview' %}
+            {{ user }}
+        {% endif %}
+    {% endfor %}
+</div>
+<br><br><br>
+<div>
+    <h1>Part 3</h1>
+    {% for user in all_users %}
+    {% if user.id <= 5 %}
+        {{ user }}<br>
+    {% endif %}
+    {% endfor %}
+</div>
+</body>
+</html>
