@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                <h2 style="color:white">{{ form.name.label}}:</h2>
+                {{ form.name(class="form-control")}}
+            </div>
+            <div class="mb-3">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+        <div>
+            {% for message in get_flashed_messages() %}
+                <p><strong class="form-control is-invalid">{{ message }}</strong></p>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

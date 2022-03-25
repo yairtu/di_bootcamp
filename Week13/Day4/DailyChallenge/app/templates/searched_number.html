@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+    <br>
+    <br>
+<div class="container-fluid">
+        <table class="table table-info table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+            </tr>
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.address }}</td>
+                <td>{{ number }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
