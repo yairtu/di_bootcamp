@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="container-fluid">
+        <h1 style="color:white" class="row justify-content-center">All records</h1>
+        <table class="table table-info table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Nationalities</th>
+            </tr>
+            {% for person in people.items %}
+                <tr>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.email }}</td>
+                    <td>{{ person.address }}</td>
+                    <td>{{ person.phonenumbers.first().number }}</td>
+                    <td>{{ person.nationalities[0].name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <nav class="nav justify-content-center" aria-label="...">
+            <ul class="pagination">
+                {% for page in people.iter_pages() %}
+
+                    {% if page %}
+                        <li class="page-item"><a class="page-link" href="{{ url_for('pagination', page_number=page) }}">{{ page }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="">...</a></li>
+                    {% endif %}
+
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
