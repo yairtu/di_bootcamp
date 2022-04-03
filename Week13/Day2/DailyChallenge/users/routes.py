@@ -22,10 +22,10 @@ def index():
 def login():
 	form = LoginForm()
 	if form.validate_on_submit():
-		# I am getting FileNotFoundError with the below commented, cannot figure out why
-		# file = "./static/form_data.json"
-		# with open(file, 'w') as f:
-		# 	json.dump(form.data, f, indent=4)
+		I am getting FileNotFoundError with the below commented, cannot figure out why
+		file = "./static/form_data.json"
+		with open(file, 'w') as f:
+			json.dump(form.data, f, indent=4)
 		result = request.form.to_dict(flat=False)
 		print(result)
 		for user in get_all_users_db():
