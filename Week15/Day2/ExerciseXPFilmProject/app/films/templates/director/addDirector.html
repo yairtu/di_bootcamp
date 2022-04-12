@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block content %}
+    <div class="container">
+        <h1>Add Director</h1>
+        <form class="form-horizontal" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="input-group mb-3">
+                <div class="row">
+                     {{ form.first_name(class="form-control", placeholder="First Name") }}
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="row">
+                    {{ form.last_name(class="form-control", placeholder="Last Name") }}
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="row">
+                    {{ form.film(class="form-select", placeholder="Film", style="width: 11vw") }}
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="row">
+                    {{ form.submit(class="btn btn-lg btn-primary btn-block") }}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

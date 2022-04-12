@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="accounts" uuid="76931e62-1338-4099-894b-5cb6c525f1be">
+    <data-source source="LOCAL" name="db" uuid="5d15fe48-602e-4214-a240-284b93af079b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\yairt\OneDrive\Documents\Hackathon#2\Hackathon\app\accounts.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\yairt\OneDrive\Documents\DI-Bootcamp\Week15\Day5\CryptoCurrenciesProject\webapp\db.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
