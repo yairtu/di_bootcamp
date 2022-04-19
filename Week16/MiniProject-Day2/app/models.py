@@ -2,9 +2,12 @@ import json
 from datetime import datetime
 
 import requests
+from flask import abort
+from flask_admin.contrib.sqla import ModelView
+from flask_security import RoleMixin
 
 from app import db, login_manager
-from flask_login import UserMixin
+from flask_login import UserMixin, current_user
 
 
 # @login_manager.user_loader
@@ -28,9 +31,41 @@ class User(db.Model, UserMixin):
 	password = db.Column(db.String(100))
 	type = db.Column(db.String(25), nullable=False)
 	image_url = db.Column(db.String(100))
-	credits = db.Column(db.Integer, default=100)
+	credits = db.Column(db.Float, default=100.0)
+	points = db.Column(db.Integer, default=0)
 	card = db.relationship('Card', secondary=user_cards, backref='cards')
-	date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+	posts = db.relationship('Post', backref='user')
+	comments = db.relationship('Comment', backref='user')
+	admin = db.Column(db.Boolean, default=False)
+	date_created = db.Column(db.Date, nullable=False, default=datetime.utcnow)
+
+
+class Post(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	title = db.Column(db.String(100), nullable=False)
+	date_posted = db.Column(db.DateTime, default=datetime.utcnow)
+	content = db.Column(db.Text, nullable=False)
+	card = db.Column(db.String(100))
+	price = db.Column(db.Integer)
+	sold = db.Column(db.Boolean, default=False)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+	comments = db.relationship('Comment', backref='post')
+
+	def delete_post(self):
+		db.session.delete(self)
+		db.session.commit()
+
+
+class Comment(db.Model):
+	id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
+	content = db.Column(db.String(500), nullable=False)
+	date_posted = db.Column(db.DateTime, default=datetime.utcnow)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
+
+	def delete_comment(self):
+		db.session.delete(self)
+		db.session.commit()
 
 
 class Card(db.Model):
@@ -39,15 +74,8 @@ class Card(db.Model):
 	name = db.Column(db.String(30))
 	type = db.Column(db.String(20))
 	rarity = db.Column(db.String(15))
+	image_url = db.Column(db.String(50))
 	price = db.Column(db.String(15))
-
-
-class Post(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	title = db.Column(db.String(100), nullable=False)
-	date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-	content = db.Column(db.Text, nullable=False)
-	user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 
 def add_cards_db():
@@ -59,6 +87,14 @@ def add_cards_db():
 						price=card['card_prices'][0]['amazon_price'])
 			db.session.add(card)
 			db.session.commit()
+
+
+class SecureModelView(ModelView):
+	def is_accessible(self):
+		if not current_user.admin:
+			return abort(403)
+		else:
+			return True
 
 
 def get_random_card():

@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">{% endblock %}
+{% block content %}
+    <div class="container text-center">
+        <h1 class="mt-5">My Cards</h1><br>
+        <h6>Profile type: {{ user.type }}</h6>
+        <div class="media"><img style="max-height: 100px; width: auto" src="{{ url_for('static', filename=img) }}" alt=""></div>
+        <div class="row d-flex justify-content-between gx-5">
+            {% for card in cards %}
+                <div class="card hover-card bg-dark mt-5 p-0" style="width: 15rem;">
+                    <img src="{{ card.image_url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="{{ url_for('forum.forum_home') }}" class="btn btn-primary">Sell</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

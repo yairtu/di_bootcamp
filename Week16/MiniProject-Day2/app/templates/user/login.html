@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+{% endblock %}
 {% block search %}
 {% endblock %}
 {% block content %}
@@ -13,7 +16,7 @@
                 {{ form.remember.label }}
             </div>
             {{ form.login(class="btn btn-lg btn-primary btn-block") }}
-            <p class="mt-5 mb-3 text-muted">No account? <a href="{{ url_for('user.register') }}">Sign up</a></p>
+            <p class="mt-5 mb-3 text-muted">No account? <a href="{{ url_for('user_bp.register') }}">Sign up</a></p>
         </form>
     </div>
 {% endblock %}
