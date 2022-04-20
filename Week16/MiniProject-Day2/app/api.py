@@ -1,14 +1,13 @@
 import json
-
 # from app import db, create_app
 # from models import Card
 import requests
-#
+
 # file = './static/all_cards.json'
 # request = requests.get('https://db.ygoprodeck.com/api/v7/cardinfo.php').json()
 # with open(file, 'w+') as f:
 # 	json.dump(request, f, indent=4)
-
+#
 
 
 
@@ -34,7 +33,7 @@ def get_card_rarity(card_id):
 			'set_rarity']
 
 
-#add all to db
+# add all to db
 # file = 'app/static/all_cards.json'
 # 	with open(file, 'r') as f:
 # 		data = json.load(f)

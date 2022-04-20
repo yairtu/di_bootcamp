@@ -91,10 +91,11 @@ def add_cards_db():
 
 class SecureModelView(ModelView):
 	def is_accessible(self):
-		if not current_user.admin:
+		try:
+			if current_user.admin:
+				return True
+		except AttributeError:
 			return abort(403)
-		else:
-			return True
 
 
 def get_random_card():

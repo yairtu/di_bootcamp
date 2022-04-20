@@ -14,7 +14,7 @@ migrate = Migrate()
 bcrypt = Bcrypt()
 login_manager = LoginManager()
 admin = Admin()
-login_manager.login_view = 'user.login'
+login_manager.login_view = 'user_bp.login'
 login_manager.login_message_category = 'info'
 from app.models import User, Post, Comment, Card, SecureModelView
 

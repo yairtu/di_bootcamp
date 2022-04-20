@@ -27,13 +27,12 @@ def register():
 		new_user = User(username=form.username.data, email=form.email.data, password=enc_pw, type=form.profile.data)
 		db.session.add(new_user)
 		db.session.commit()
-		print(new_user)
 		for i in range(40):
 			card = Card.query.filter_by(id=randint(1, 11282)).first()
 			new_user.card.append(card)
 			db.session.commit()
 		flash('Your account has been created!', 'success')
-		return redirect(url_for('user.login'))
+		return redirect(url_for('user_bp.login'))
 	return render_template('user/register.html', form=form)
 
 
